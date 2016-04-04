@@ -49,6 +49,35 @@ def db_insert_task(text, urgent):
     conn.close()
 
 
+def get_sorted_tasks_list():
+    '''
+    :param tasks_list: list of existing tasks
+
+    Get existing tasks from the database
+    '''
+
+    tasks_list = []
+    sql = "SELECT todo FROM task order by todo ASC"
+    conn = sqlite3.connect("task_list.db")
+
+    # to remove u from sqlite3 cursor.fetchall()
+    conn.text_factory = sqlite3.OptimizedUnicode
+
+
+    cursor = conn.cursor()
+    cursor.execute(sql)
+
+    results = cursor.fetchall()
+
+    # print results
+
+    for tasks in results:
+        tasks_list.append(tasks[0]) #using conn.text_factory = sqlite3.OptimizedUnicode tasks is a list for each item, so we have to take the first element of the list
+
+    conn.close()
+
+    return tasks_list
+
 def db_remove_task(text):
     '''
     :param text: text (or part of it) of the task we want to remove from the db
