@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="930d83fa-f9bd-4806-9272-71324850e2f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task_list.db" afterPath="$PROJECT_DIR$/task_list.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_interaction.py" afterPath="$PROJECT_DIR$/db_interaction.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo_list_db_ex2a.py" afterPath="$PROJECT_DIR$/todo_list_db_ex2a.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo_list_db_ex2b.py" afterPath="$PROJECT_DIR$/todo_list_db_ex2b.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo_list_db_ex2c.py" afterPath="$PROJECT_DIR$/todo_list_db_ex2c.py" />
     </list>
     <ignored path="python-lab3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -663,8 +657,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16296296">
-          <caret line="4" column="81" selection-start-line="4" selection-start-column="81" selection-end-line="4" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.08148148">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
