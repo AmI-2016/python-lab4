@@ -1,5 +1,5 @@
-# Python - Lab 3
+# Python - Lab 4
 
-Intermediate Python exercises, proposed in the third lab.
+Using Databases (MySQL, SQLite) with Python: exercises proposed in the forth lab.
 
 See [http://bit.ly/polito-ami](http://bit.ly/polito-ami) for further information.

@@ -18,11 +18,7 @@ limitations under the License
 
 # this script is an extension of the script todo_list_db_ex2a.py
 
-
-from sys import argv
-import os
 import db_interaction
-
 
 def new_task():
     '''
@@ -34,7 +30,7 @@ def new_task():
 
     urgent = -1
     # ask user to specify if the just inserted task is urgent or not
-    # we continue to ask it until she insert Y or N
+    # we continue to ask it until she inserts Y or N
     while (urgent == -1):
         urgent_string = raw_input("Is this task urgent (Y/N)?\n>")
         if len(urgent_string) == 1:
@@ -51,9 +47,7 @@ def new_task():
 
 def print_sorted_list():
     '''
-    :param tasks_list: list of existing tasks
-
-    Print the elements of the list, sorted in alphabetic order
+    Print the elements of the list, sorted in alphabetic order (we order data directly through sql)
     '''
 
     #get the list of tasks from the database
@@ -67,7 +61,7 @@ if __name__ == '__main__':
     # set a variable to False: it will be used to re-execute the program multiple times
     ended = False
 
-    # keep asking strings until the user types 4 (to exit)
+    # keep asking strings until the user types 3 (to exit)
     while not ended:
 
         # print the menu every time we finish to perform an operation

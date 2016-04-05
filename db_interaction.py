@@ -15,8 +15,6 @@ limitations under the License
 @author: tmontanaro
 '''
 
-from sys import argv
-import os
 import sqlite3
 
 
@@ -38,7 +36,7 @@ def db_insert_task(text, urgent):
     try:
         #execute the query passing the needed parameters
         cursor.execute(sql, (text, urgent) )
-        #commit all pending executed queries in the connection
+        #commit all pending queries
         conn.commit()
     except Exception,e:
         print str(e)
@@ -57,10 +55,10 @@ def get_sorted_tasks_list():
     '''
 
     tasks_list = []
-    sql = "SELECT todo FROM task order by todo ASC"
+    sql = "SELECT todo FROM task order by todo ASC" #here we order data using "order by"
     conn = sqlite3.connect("task_list.db")
 
-    # to remove u from sqlite3 cursor.fetchall()
+    # to remove u from sqlite3 cursor.fetchall() results
     conn.text_factory = sqlite3.OptimizedUnicode
 
 
@@ -71,8 +69,8 @@ def get_sorted_tasks_list():
 
     # print results
 
-    for tasks in results:
-        tasks_list.append(tasks[0]) #using conn.text_factory = sqlite3.OptimizedUnicode tasks is a list for each item, so we have to take the first element of the list
+    for task in results:
+        tasks_list.append(task[0]) #each "task" is a tuple, so we have to take the first element of it
 
     conn.close()
 
@@ -86,7 +84,7 @@ def db_remove_task(text):
     '''
 
     # prepare the query text
-    sql = """delete from task where todo LIKE ?"""
+    sql = "delete from task where todo LIKE ?"
 
     # add percent sign (%) wildcard to select all the strings that contain specified text
     # <<the multiple character percent sign (%) wildcardcan be used to represent any number of characters in a value match>>

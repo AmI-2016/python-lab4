@@ -16,7 +16,7 @@ limitations under the License
 '''
 
 
-# this script is an extension of the script todo_list_db_ex2a.py
+# this script is an extension of the script todo_list_db_ex2b.py
 
 
 from sys import argv
@@ -34,7 +34,7 @@ def new_task():
 
     urgent = -1
     # ask user to specify if the just inserted task is urgent or not
-    # we continue to ask it until she insert Y or N
+    # we continue to ask it until she inserts Y or N
     while (urgent == -1):
         urgent_string = raw_input("Is this task urgent (Y/N)?\n>")
         if len(urgent_string) == 1:
@@ -62,8 +62,6 @@ def remove_multiple_tasks():
 
 def print_sorted_list():
     '''
-    :param tasks_list: list of existing tasks
-
     Print the elements of the list, sorted in alphabetic order
     '''
 
